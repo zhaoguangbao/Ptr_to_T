@@ -1,15 +1,19 @@
-#include "Ptr_to_T.h"
+//#include "Ptr_to_T.h"
 #include <string.h>
 #include <iostream>
 
-using namespace Ptr;
+//using namespace Ptr;
 using std::cout;
 using std::cin;
 using std::endl;
+#include "Ptr_to_T_temp.cpp"
+
+using namespace PtrTemp;
 
 int main()
 {
     //Ptr_to_T
+    typedef Ptr_to_T<char> Ptr_to_T;
     char v[200]={0};
     strcpy(v,"test_const_cstr");
     Ptr_to_T p(&v[0],v,strlen(v));
